@@ -1,0 +1,186 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: burlywood;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+
+.cursiva {
+    font-family: "Playwrite NZ Basic", cursive;
+    font-weight: 300;
+    font-size: 1.5em;
+    color: #5a4a3a;
+}
+
+
+header, main, footer {
+    width: 100%;
+    max-width: 800px;
+}
+
+main {
+    flex: 1; 
+}
+
+
+.card {
+    background-color: blanchedalmond;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+header.card      { animation-delay: 0s; }
+
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+#sobre {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.placeholder-imagem {
+    width: 120px;
+    height: 120px;
+    background-color: #dab997;
+    border: 3px solid #8b735b; /* Borda mais forte e sólida */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #6d5843;
+    /* Estilo para o monograma */
+    font-family: "Playwrite NZ Basic", cursive;
+    font-size: 2.8em; /* Letra maior */
+    font-weight: 400;
+    flex-shrink: 0;
+}
+.sobre-texto h2 {
+    margin-bottom: 10px;
+}
+
+
+
+#citacao {
+    text-align: center;
+}
+#citacao span {
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+
+
+#habilidades ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+#habilidades li {
+    background-color: #e6ccb2;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#habilidades li:hover {
+    background-color: #c8a788;
+    color: white;
+    transform: scale(1.08);
+}
+
+
+
+#contato p {
+    margin-bottom: 8px;
+}
+#contato a {
+    color: #8b4513;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+#contato a:hover {
+    color: #a0522d;
+    text-decoration: underline;
+}
+
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #5a4a3a;
+    font-size: 0.9em;
+}
+
+h1, h2 {
+    color: #8B4513; 
+    margin-bottom: 15px;
+}
+
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    .card {
+        padding: 20px;
+    }
+    #sobre {
+        flex-direction: column;
+        text-align: center;
+    }
+}
